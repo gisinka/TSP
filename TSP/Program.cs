@@ -5,7 +5,7 @@ namespace TSP
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var (route, price) = TSPSolver.Solve(ReadMatrix());
 
