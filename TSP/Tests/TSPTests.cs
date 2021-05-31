@@ -58,6 +58,17 @@ namespace TSP.Tests
                     {5, 4, 11, 6, 0, 14},
                     {17, 7, 12, 13, 16, 0}
                 }
+            },
+            {
+                "dataset6", new[,]
+                {
+                    {0, 1, 1, 1, 1, 1},
+                    {1, 0, 1, 1, 1, 1},
+                    {1, 1, 0, 1, 1, 1},
+                    {1, 1, 1, 0, 1, 1},
+                    {1, 1, 1, 1, 0, 1},
+                    {1, 1, 1, 1, 1, 0}
+                }
             }
         };
 
@@ -66,6 +77,7 @@ namespace TSP.Tests
         [TestCase("dataset3", 18)]
         [TestCase("dataset4", 180)]
         [TestCase("dataset5", 38)]
+        [TestCase("dataset6", 6)]
         public static void PathPriceTest(string dataset, int expectedPrice)
         {
             var matrix = MatricesStorage[dataset];
