@@ -22,7 +22,14 @@ namespace TSP.Tests
                 {"permutations1", new List<int[]> {new int[0]}},
                 {"permutations2", new List<int[]> {new[] {0}}},
                 {"permutations3", new List<int[]> {new[] {0, 1}, new[] {1, 0}}},
-                {"permutations4", new List<int[]> {new[] {0, 1, 2}, new[] {0, 2, 1}, new[] {1, 0, 2}, new[] {1, 2, 0}, new[] {2, 0, 1}, new[] {2, 1, 0}}},
+                {
+                    "permutations4",
+                    new List<int[]>
+                    {
+                        new[] {0, 1, 2}, new[] {0, 2, 1}, new[] {1, 0, 2}, new[] {1, 2, 0}, new[] {2, 0, 1},
+                        new[] {2, 1, 0}
+                    }
+                },
                 {
                     "permutations5",
                     new List<int[]>
