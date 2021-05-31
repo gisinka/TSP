@@ -8,18 +8,18 @@ namespace TSP.Core
     {
         public static List<int[]> GetIndexPermutations(int length)
         {
-            return MakePermutations(new int[length], new List<int[]>());
+            return MakeIndexPermutations(new int[length], new List<int[]>());
         }
 
         public static List<T[]> GetPermutations(T[] array)
         {
-            var indexPermutations = MakePermutations(new int[array.Length], new List<int[]>());
+            var indexPermutations = MakeIndexPermutations(new int[array.Length], new List<int[]>());
             return indexPermutations
                 .Select(x => x.Select(y => array[y]).ToArray())
                 .ToList();
         }
 
-        private static List<int[]> MakePermutations(int[] permutation, List<int[]> permutations, int position = 0)
+        private static List<int[]> MakeIndexPermutations(int[] permutation, List<int[]> permutations, int position = 0)
         {
             if (position == permutation.Length)
             {
@@ -33,7 +33,7 @@ namespace TSP.Core
                 if (index != -1)
                     continue;
                 permutation[position] = i;
-                MakePermutations(permutation, permutations, position + 1);
+                MakeIndexPermutations(permutation, permutations, position + 1);
             }
 
             return permutations;
