@@ -6,15 +6,15 @@ namespace TSP.Core
     {
         public static (int[], int) Solve(int[,] weights)
         {
-            return Evaluate(weights);
+            return ChooseCheapest(weights);
         }
 
-        private static (int[], int) Evaluate(int[,] weights)
+        private static (int[], int) ChooseCheapest(int[,] weights)
         {
             var minPrice = int.MaxValue;
             var result = new int[0];
 
-            var permutations = Permutator.GetPermutations(new int[weights.GetLength(0)]);
+            var permutations = Permutator<int>.GetIndexPermutations(weights.GetLength(0));
 
             foreach (var permutation in permutations)
             {

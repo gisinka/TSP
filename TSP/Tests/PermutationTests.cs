@@ -10,10 +10,10 @@ namespace TSP.Tests
         private static readonly Dictionary<string, int[]> ArrayStorage = new Dictionary<string, int[]>
         {
             {"dataset1", new int[0]},
-            {"dataset2", new int[1]},
-            {"dataset3", new int[2]},
-            {"dataset4", new int[3]},
-            {"dataset5", new int[4]}
+            {"dataset2", new[] {0}},
+            {"dataset3", new[] {0, 1}},
+            {"dataset4", new[] {0, 1, 2}},
+            {"dataset5", new[] {0, 1, 2, 3}}
         };
 
         private static readonly Dictionary<string, List<int[]>> PermutationsStorage =
@@ -51,7 +51,7 @@ namespace TSP.Tests
         [TestCase("dataset5", "permutations5")]
         public static void PermutationTest(string dataset, string permutations)
         {
-            Assert.AreEqual(PermutationsStorage[permutations], Permutator.GetPermutations(ArrayStorage[dataset]));
+            Assert.AreEqual(PermutationsStorage[permutations], Permutator<int>.GetPermutations(ArrayStorage[dataset]));
         }
     }
 }
