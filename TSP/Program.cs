@@ -27,7 +27,7 @@ namespace TSP
             var weights = new int[dimension, dimension];
             for (var i = 0; i < dimension; i++)
             {
-                Console.Write($"Введите веса {i + 1}-ой строки матрицы через пробел: ");
+                Console.Write($"Введите веса {i}-ой строки матрицы через пробел (нумерация строк с нуля): ");
                 var row = Console.ReadLine()?.Split();
                 for (var j = 0; j < dimension; j++)
                     if (row != null)

@@ -13,7 +13,6 @@ namespace TSP.Core
         {
             var minPrice = int.MaxValue;
             var result = new int[0];
-
             var permutations = Permutator<int>.GetIndexPermutations(weights.GetLength(0));
 
             foreach (var permutation in permutations)

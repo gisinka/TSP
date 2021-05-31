@@ -21,11 +21,7 @@ namespace TSP.Core
 
         private static List<int[]> MakeIndexPermutations(int[] permutation, List<int[]> permutations, int position = 0)
         {
-            if (position == permutation.Length)
-            {
-                permutations.Add(permutation.ToArray());
-                return permutations;
-            }
+            if (position == permutation.Length) permutations.Add(permutation.ToArray());
 
             for (var i = 0; i < permutation.Length; i++)
             {
